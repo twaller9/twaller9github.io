@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UHON99H Final Project | Thomas Waller</title>
-  <meta name="description" content="A reflective blog post on my work with MedEdAI: challenges, lessons learned, and how the experience shaped future goals in AI and software engineering." />
+  <title>My Time Working on MedEdAI | Thomas Waller</title>
+  <meta name="description" content="Reflecting on my time spent developing MedEdAI, lessons learned, and future goals in AI and software engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
@@ -24,7 +24,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -73,6 +72,12 @@
       text-align: center;
       animation: fadeUp 0.7s ease both;
     }
+    .hero .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
     .hero .kicker {
       font-family: var(--mono);
       font-size: 0.72rem;
@@ -90,10 +95,7 @@
       color: var(--ink);
       margin-bottom: 1.5rem;
     }
-    .hero h1 em {
-      color: var(--accent);
-      font-style: italic;
-    }
+    .hero h1 em { color: var(--accent); font-style: italic; }
     .hero .subhead {
       font-size: 1.15rem;
       font-weight: 300;
@@ -136,10 +138,7 @@
       color: var(--ink-muted);
       margin-bottom: 0.9rem;
     }
-    .toc ol {
-      list-style: none;
-      counter-reset: toc;
-    }
+    .toc ol { list-style: none; counter-reset: toc; }
     .toc ol li {
       counter-increment: toc;
       display: flex;
@@ -163,7 +162,7 @@
     }
     .toc a:hover { color: var(--accent); border-color: var(--accent); }
 
-    /* ── MAIN CONTENT ── */
+    /* ── CONTENT ── */
     .content {
       max-width: var(--max);
       margin: 0 auto;
@@ -179,10 +178,7 @@
       transform: translateY(24px);
       transition: opacity 0.55s ease, transform 0.55s ease;
     }
-    .section.visible {
-      opacity: 1;
-      transform: none;
-    }
+    .section.visible { opacity: 1; transform: none; }
     .section-label {
       font-family: var(--mono);
       font-size: 0.65rem;
@@ -210,35 +206,11 @@
       color: var(--ink);
       margin-bottom: 1.5rem;
     }
-    .section p {
-      color: var(--ink-soft);
-      margin-bottom: 1.2rem;
-    }
+    .section p { color: var(--ink-soft); margin-bottom: 1.2rem; }
     .section p:last-child { margin-bottom: 0; }
 
-    /* ── PULLQUOTE ── */
-    .pullquote {
-      margin: 2.5rem 0;
-      padding: 1.5rem 2rem;
-      border-left: 3px solid var(--accent);
-      background: var(--accent-lt);
-      border-radius: 0 4px 4px 0;
-    }
-    .pullquote p {
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 1.25rem;
-      line-height: 1.55;
-      color: var(--ink);
-      margin: 0;
-    }
-
     /* ── CHALLENGE CARDS ── */
-    .cards {
-      display: grid;
-      gap: 1.2rem;
-      margin: 2rem 0;
-    }
+    .cards { display: grid; gap: 1.2rem; margin: 2rem 0; }
     .card {
       background: var(--surface);
       border: 1px solid var(--rule);
@@ -260,13 +232,9 @@
       margin-bottom: 0.5rem;
       color: var(--ink);
     }
-    .card p {
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      margin: 0;
-    }
+    .card p { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
 
-    /* ── SKILLS LIST ── */
+    /* ── SKILL CHIPS ── */
     .skill-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -285,56 +253,7 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .skill-chip::before {
-      content: '→';
-      color: var(--accent);
-      font-size: 0.8rem;
-    }
-
-    /* ── IMAGE PLACEHOLDER ── */
-    .img-placeholder {
-      width: 100%;
-      background: var(--surface);
-      border: 2px dashed var(--rule);
-      border-radius: 4px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      margin: 2rem 0;
-      color: var(--ink-muted);
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      text-align: center;
-      gap: 0.5rem;
-    }
-    .img-placeholder .ph-icon { font-size: 2rem; }
-    .img-placeholder figcaption {
-      margin-top: 0.8rem;
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--ink-muted);
-    }
-
-    /* ── REAL IMAGE ── */
-    figure {
-      margin: 2rem 0;
-    }
-    figure img {
-      width: 100%;
-      border-radius: 4px;
-      display: block;
-    }
-    figure figcaption {
-      margin-top: 0.6rem;
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--ink-muted);
-      text-align: center;
-    }
+    .skill-chip::before { content: '→'; color: var(--accent); font-size: 0.8rem; }
 
     /* ── FOOTER ── */
     .site-footer {
@@ -346,19 +265,14 @@
       font-size: 0.7rem;
       letter-spacing: 0.08em;
     }
-    .site-footer a {
-      color: var(--accent-lt);
-      text-decoration: none;
-    }
+    .site-footer a { color: var(--accent-lt); text-decoration: none; }
     .site-footer a:hover { text-decoration: underline; }
 
-    /* ── ANIMATION ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: none; }
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero { padding: 3rem 1.5rem 2rem; }
       .content { padding: 0 1.5rem 4rem; }
@@ -369,217 +283,121 @@
 </head>
 <body>
 
-  <!-- ── STICKY HEADER ── -->
   <header class="site-header">
     <a class="site-name" href="#">Thomas Waller</a>
-    <span class="byline">MedEdAI &mdash; My reflection</span>
+    <span class="byline">MedEdAI &mdash; A Developer's Reflection</span>
   </header>
 
-  <!-- ── HERO ── -->
   <section class="hero">
-    <span class="kicker">Creative Project — Spring 2025</span>
-    <h1>Building <em>MedEdAI</em>:<br>What I have Done, What I Would do Over,<br>and What I Learned</h1>
-    <p class="subhead">
-      A reflective look at developing an AI-powered clinical simulation platform — the technical challenges, the surprises, and how it reshaped my goals.
-    </p>
+    <img
+      class="logo"
+      src="Untitled.png"
+      alt="MedEdAI company logo"
+    />
+    <span class="kicker">Creative Project &mdash; Spring 2025</span>
+    <h1>My Time Working on <em>MedEdAI</em></h1>
+    <p class="subhead">Reflecting on my time spent, lessons learned, and future goals.</p>
     <div class="meta-row">
       <span>By Thomas Waller</span>
-      <span><!-- e.g. April 2025 --></span>
-      <span>~8 min read</span>
+      <span>Spring 2025</span>
+      <span>~5 min read</span>
     </div>
   </section>
 
-  <!-- ── TABLE OF CONTENTS ── -->
   <div class="toc-wrap">
     <nav class="toc" aria-label="Table of contents">
       <h2>Contents</h2>
       <ol>
         <li><a href="#intro">What Is MedEdAI?</a></li>
-        <li><a href="#what-i-built">What I Built</a></li>
+        <li><a href="#role">My Role</a></li>
         <li><a href="#challenges">Technical Challenges</a></li>
         <li><a href="#technical-lessons">What I Learned Technically</a></li>
-        <li><a href="#reflections">Personal &amp; Professional Reflections</a></li>
         <li><a href="#goals">How It Shaped My Goals</a></li>
-        <li><a href="#closing">Looking Ahead</a></li>
       </ol>
     </nav>
   </div>
 
-  <!-- ── MAIN ── -->
   <main class="content">
 
-    <!-- 01 INTRO -->
     <article class="section" id="intro">
       <p class="section-label">01 &mdash; Introduction</p>
       <h2>What Is MedEdAI?</h2>
-
-      <!-- REPLACE: Add a project logo or screenshot here -->
-      <div class="img-placeholder" role="img" aria-label="Placeholder for a MedEdAI logo or overview screenshot">
-        <span class="ph-icon">🩺</span>
-        <span>Replace with a logo, screenshot, or project image</span>
-        <figcaption>Alt text tip: describe what the image shows specifically, e.g. "MedEdAI dashboard showing a clinical scenario prompt with student response field"</figcaption>
-      </div>
-
       <p>
-        <!-- REPLACE: 2–3 sentences setting the scene. What is MedEdAI? What problem does it solve? -->
-        MedEdAI is a startup building AI-powered clinical simulations for medical education. The core idea is simple but powerful: instead of memorizing static case studies, students interact with realistic patient scenarios driven by large language models, receiving adaptive feedback in real time.
+        MedEdAI is a startup building AI-powered clinical simulations for medical education. The main idea is that instead of memorizing static case studies, students interact with realistic patient scenarios driven by large language models, receiving adaptive feedback in real time.
       </p>
       <p>
-        <!-- REPLACE: Why does this matter? Why were you drawn to it? -->
-        Access to high-quality clinical training is expensive and logistically difficult — MedEdAI aims to democratize it. When I joined the team, the potential felt obvious. The hard part was building it.
+        This enables students to practice with realistic, real-time communication scenarios without taking the time of another educator or physician.
       </p>
-
-      <div class="pullquote">
-        <p>"<!-- REPLACE: A quote from yourself, a teammate, or a reflection that captures the spirit of the project -->"</p>
-      </div>
     </article>
 
-    <!-- 02 WHAT I BUILT -->
-    <article class="section" id="what-i-built">
-      <p class="section-label">02 &mdash; The Work</p>
+    <article class="section" id="role">
+      <p class="section-label">02 &mdash; My Role</p>
       <h2>What I Built</h2>
       <p>
-        <!-- REPLACE: Describe your role. What features did you own? What was the stack? -->
-        My role centered on [describe your role here — e.g., full-stack development, AI integration, frontend, API design]. The platform was built using [React / TypeScript / Django / etc.], with [LLM provider] powering the simulation engine.
+        My role was working on full-stack development of the application, including API development, frontend, and AI integration. My responsibilities included taking and implementing user feedback, implementing RAG and customizing the AI pipeline for different use cases, and building a functional website to host it all.
       </p>
-      <p>
-        <!-- REPLACE: 1–2 sentences on scope — what you shipped, what the user-facing result looked like. -->
-        Over the course of the project I built [features], integrated [tools/APIs], and deployed to [platform].
-      </p>
-
-      <!-- REPLACE: Add a screenshot of what you built -->
-      <figure>
-        <div class="img-placeholder" role="img" aria-label="Placeholder for a screenshot of the MedEdAI interface">
-          <span class="ph-icon">💻</span>
-          <span>Replace with a screenshot of the app or a diagram of the architecture</span>
-        </div>
-        <figcaption><!-- e.g. "The patient intake simulation screen, where students respond to an AI-generated clinical scenario." --></figcaption>
-      </figure>
     </article>
 
-    <!-- 03 CHALLENGES -->
     <article class="section" id="challenges">
       <p class="section-label">03 &mdash; What Was Hard</p>
       <h2>Technical Challenges</h2>
-      <p>
-        <!-- REPLACE: 1–2 sentences framing the challenge section — nothing goes perfectly, here's what didn't. -->
-        No project survives first contact with reality. Here are the three problems that slowed me down the most.
-      </p>
+      <p>No project survives first contact with reality. Here are the three problems that required the most attention.</p>
 
       <div class="cards">
         <div class="card">
           <p class="card-num">Challenge 01</p>
-          <h3><!-- REPLACE: e.g. Deployment & Environment Setup --></h3>
-          <p><!-- REPLACE: Describe the specific problem and how you debugged or solved it. Be concrete — specific errors, tools, decisions. --></p>
+          <h3>AI Hallucination</h3>
+          <p>Without proper context and guardrails, the AI chatbot can sometimes dive too deep into its role and produce instructions or data outside the scope of the case. In order to ground it, it needs to be scoped properly and provided with ample context and comprehensive instruction on what it can and can't say.</p>
         </div>
         <div class="card">
           <p class="card-num">Challenge 02</p>
-          <h3><!-- REPLACE: e.g. Prompt Engineering for Clinical Accuracy --></h3>
-          <p><!-- REPLACE: --></p>
+          <h3>User Feedback Loops</h3>
+          <p>Receiving feedback and making changes can be difficult, as there are varying amounts of data to work with. Some people are more specific and others less, meaning some issues can get overlooked. Providing a means for structured and detailed feedback is a necessary part of building an app that satisfies as many users as possible.</p>
         </div>
         <div class="card">
           <p class="card-num">Challenge 03</p>
-          <h3><!-- REPLACE: e.g. Integrating LLM Responses with UI State --></h3>
-          <p><!-- REPLACE: --></p>
+          <h3>Reliability Issues</h3>
+          <p>When an application is reliant on several dependencies, only one outage or incorrect line of code can render whole features — or even the entire project — unusable for a time. Implementing explicit redundancy and proper CI/CD pipelines helped solve these issues and became a key focus afterwards.</p>
         </div>
-      </div>
-
-      <div class="pullquote">
-        <p>"<!-- REPLACE: A reflection on the challenge process — what debugging at this scale taught you about patience, systems thinking, etc. -->"</p>
       </div>
     </article>
 
-    <!-- 04 TECHNICAL LESSONS -->
     <article class="section" id="technical-lessons">
       <p class="section-label">04 &mdash; Skills Gained</p>
       <h2>What I Learned Technically</h2>
-      <p>
-        <!-- REPLACE: Frame this section — what came out of the hard work? -->
-        Beyond solving individual bugs, the project forced me to build fluency in areas I'd only touched in coursework.
-      </p>
 
       <div class="skill-grid" aria-label="Technical skills gained">
-        <!-- REPLACE: Edit, add, or remove chips to reflect your actual skills gained -->
-        <div class="skill-chip">Full-stack deployment</div>
-        <div class="skill-chip">LLM API integration</div>
+        <div class="skill-chip">Full-stack development</div>
+        <div class="skill-chip">AI integration</div>
+        <div class="skill-chip">RAG implementation</div>
         <div class="skill-chip">Prompt engineering</div>
-        <div class="skill-chip">REST API design</div>
-        <div class="skill-chip">React / TypeScript</div>
         <div class="skill-chip">CI/CD pipelines</div>
-        <div class="skill-chip"><!-- Add your own --></div>
-        <div class="skill-chip"><!-- Add your own --></div>
+        <div class="skill-chip">API development</div>
       </div>
 
       <p>
-        <!-- REPLACE: 1–2 paragraphs reflecting on the most meaningful technical growth. Not just a list — why did it matter? -->
-        The most meaningful shift was [describe your biggest technical growth area]. Before this project, I understood [X] conceptually — after, I understood it operationally.
+        I have learned much from working with MedEdAI. I have honed my skills in full-stack development, but have specifically learned much about AI integration, including techniques like RAG that keep AI grounded, accurate, and as safe as possible. For many of these skills, I have been able to increase my knowledge of them from conceptual to operational through research, trial, and error.
       </p>
     </article>
 
-    <!-- 05 PERSONAL REFLECTIONS -->
-    <article class="section" id="reflections">
-      <p class="section-label">05 &mdash; Reflection</p>
-      <h2>Personal &amp; Professional Reflections</h2>
-      <p>
-        <!-- REPLACE: The honest, candid part. What surprised you? What would you do differently? -->
-        If I could go back and tell myself one thing at the start of this project, it would be [fill in].
-      </p>
-      <p>
-        <!-- REPLACE: Something you underestimated, something you got wrong, something you're proud of. -->
-        I underestimated [X]. I was surprised by [Y]. What I'm most proud of is [Z].
-      </p>
-
-      <div class="pullquote">
-        <p>"<!-- REPLACE: Your most honest reflection — the kind you'd only say in a blog post, not a resume. -->"</p>
-      </div>
-
-      <p>
-        <!-- REPLACE: Optional — anything about working on a team, the startup environment, or navigating ambiguity. -->
-        Working in a startup environment also meant [describe what that dynamic was like — fast pivots, unclear specs, ownership over decisions, etc.].
-      </p>
-    </article>
-
-    <!-- 06 GOALS -->
     <article class="section" id="goals">
-      <p class="section-label">06 &mdash; Future Direction</p>
+      <p class="section-label">05 &mdash; Future Direction</p>
       <h2>How It Shaped My Goals</h2>
       <p>
-        <!-- REPLACE: Connect the dots between this experience and what comes next for you. Be specific — CS master's, AI alignment, career direction. -->
-        This project confirmed some things I suspected and changed some things I assumed. Going into my CS master's program at UNL, I'm now more focused on [specific area] than I was before.
+        Working with MedEdAI has confirmed some things I suspected and changed some things I assumed. I have strengthened my interest in working with AI responsibly. Specifically, I have developed an interest in AI alignment. As we offload more and more responsibilities to AI systems, it is imperative to keep them aligned with the correct goals. My experience showed me exactly how hallucinations, sycophancy, and plain inaccuracy can impact the quality of a product.
       </p>
       <p>
-        <!-- REPLACE: How did building AI-powered software change your thinking about AI more broadly? About alignment, about products, about what you want to work on? -->
-        Watching an LLM interact with medical students in real time also made certain questions feel more urgent. [Connect to AI alignment interests, responsible AI, or whatever is authentic to you.]
-      </p>
-      <p>
-        <!-- REPLACE: Career direction. -->
-        On the career side, this experience [opened doors / clarified a direction / raised new questions]. I'm now pursuing [what].
-      </p>
-    </article>
-
-    <!-- 07 CLOSING -->
-    <article class="section" id="closing">
-      <p class="section-label">07 &mdash; Closing</p>
-      <h2>Looking Ahead</h2>
-      <p>
-        <!-- REPLACE: Where is MedEdAI headed? Where are you headed? One tight closing paragraph. -->
-        MedEdAI is still early. [A sentence about where the platform is going.] As for me, I'm leaving this project with a clearer sense of what I want to build and who I want to become as an engineer and researcher.
-      </p>
-      <p>
-        <!-- REPLACE: Final sentence — something that lands. -->
-        The best projects are the ones that leave you better than they found you. This one did.
+        This experience has shifted my hopeful long-term career path as well as what I will try to seek out for research in graduate school. While I had specific interests and focuses before, I have become more confident in my pursuit of a few — one of which is AI alignment. Overall, I believe that the skills and experience I have gained will prove valuable in the next stage of my career.
       </p>
     </article>
 
   </main>
 
-  <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <p>Written by Thomas Waller &mdash; University of Nebraska&ndash;Lincoln &mdash; Spring 2025</p>
     <p style="margin-top:0.5rem;"><a href="https://github.com/twaller9">github.com/twaller9</a></p>
   </footer>
 
-  <!-- ── SCROLL REVEAL ── -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -589,7 +407,6 @@
         }
       });
     }, { threshold: 0.08 });
-
     document.querySelectorAll('.section').forEach(s => observer.observe(s));
   </script>
 
